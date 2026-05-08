@@ -1,0 +1,6 @@
+{
+  "name": "Travel Planning & Experience Engine",
+  "description": "A production-grade AI-powered travel planner with real-time Google Maps integration, day-wise itineraries, and budget optimization.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["AI Itinerary Generation", "Google Maps Integration", "Real-time Travel Updates", "Budget Planning"]
+}

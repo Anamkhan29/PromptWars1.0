@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #ec4899;
+  --color-secondary: #8b5cf6;
+  --color-accent: #06b6d4;
+  --color-background: #0f172a;
+  --color-foreground: #f8fafc;
+  --color-muted: rgba(255, 255, 255, 0.05);
+  --color-muted-foreground: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  --background-image-vibrant-gradient: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #06b6d4 100%);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 antialiased;
+    background: radial-gradient(circle at top left, #1e1b4b 0%, #0f172a 100%);
+  }
+}
+
+.vibrant-text {
+  @apply bg-vibrant-gradient bg-clip-text text-transparent inline-block;
+  /* Redundant but helpful for some engine environments */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+  @apply bg-white/5 border border-white/10 backdrop-blur-xl;
+}
+
+.editorial-heading {
+  @apply font-serif italic tracking-tighter;
+}
+
+.label-tiny {
+  @apply text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-white/5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-primary/40 transition-colors;
+}
+
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
